@@ -35,5 +35,9 @@ body > a {
   color: var(--on-surface);
   text-decoration: none;
   align-self: center;
+}
+
+ms-store-badge {
+  align-self: center;
   margin: 1em;
 }
