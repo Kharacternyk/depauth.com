@@ -37,7 +37,6 @@ body > a {
   align-self: center;
 }
 
-ms-store-badge {
-  align-self: center;
+body > a > img {
   margin: 1em;
 }
