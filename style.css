@@ -27,16 +27,25 @@ h1 {
   align-items: center;
 }
 
-h1 > img {
+h1 img {
   height: 2em;
 }
 
-body > a {
+a {
   color: var(--on-surface);
   text-decoration: none;
   align-self: center;
 }
 
-body > a > img {
-  margin: 1em;
+header {
+  display: flex;
+  justify-content: center;
+}
+
+a.ms {
+  padding: 24px;
+}
+
+a.g img {
+  height: 150px;
 }
