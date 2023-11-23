@@ -20,9 +20,16 @@ body {
 
 header {
   background-color: var(--elevated-surface);
+  padding: 1em;
+}
+
+.top {
   display: flex;
   align-items: center;
-  padding: 1em;
+}
+
+.bottom {
+  display: none;
 }
 
 h1 {
@@ -57,6 +64,25 @@ header a {
 header p {
   margin: auto;
   color: var(--on-surface);
+}
+
+@media (orientation: portrait) {
+  .top .description {
+    display: none;
+  }
+
+  h1 {
+    margin-right: 1em;
+  }
+
+  header a {
+    margin-left: auto;
+  }
+
+  .bottom {
+    display: block;
+    padding-top: 1em;
+  }
 }
 
 main {
