@@ -3,76 +3,133 @@
   --primary-container: #004d64;
   --on-primary-container: #bde9ff;
   --surface: #191c1e;
+  --elevated-surface: #1e2a2f;
   --on-surface: #e1e2e4;
+  --surface-variant: #40484c;
+  --on-surface-variant: #c0c8cd;
 }
 
 body {
+  min-height: 100vh;
   font-family: var(--system-fonts);
-  background-color: var(--surface);
-  color: var(--on-surface);
   margin: 0;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-h1 {
-  background-color: var(--primary-container);
-  color: var(--on-primary-container);
-  margin: 0;
-  padding: 1em;
+header {
+  background-color: var(--elevated-surface);
   display: flex;
-  flex-direction: column;
   align-items: center;
+  padding: 1em;
+}
+
+h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-container);
+}
+
+h1 * {
+  padding: 0.2em 0.2em;
+}
+
+h1 span {
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant);
 }
 
 h1 img {
-  height: 2em;
+  height: 1em;
 }
 
-p {
-  max-width: 30em;
+header a {
+  box-shadow: 0 0.5em 1em 0.1em var(--surface);
+  background-color: var(--primary-container);
+  color: var(--on-primary-container);
+  text-decoration: none;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+header p {
+  margin: auto;
+  color: var(--on-surface);
 }
 
 main {
+  flex: 1 0 auto;
   display: flex;
-  justify-content: center;
 }
 
 @media (orientation: portrait) {
   main {
     flex-direction: column;
+    background-color: var(--surface-variant);
   }
 }
 
 section {
-  flex: 1 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 1em;
 }
 
-section a.g img {
-  height: 9em;
-}
-
-section a.ms img {
-  height: 6em;
-  padding: 1.5em 0;
-}
-
-hr {
+p {
   margin: 0;
+  padding: 0 1em;
 }
 
-footer {
-  margin: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-a {
+.desktop {
+  background-color: var(--surface);
   color: var(--on-surface);
-  text-decoration: none;
+  --shadow-color: var(--surface-variant);
+}
+
+.mobile {
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant);
+  --shadow-color: var(--surface);
+}
+
+.desktop .screenshot {
+  width: 78%;
+}
+
+.mobile .screenshot {
+  width: 22%;
+}
+
+@media (orientation: landscape) {
+  .mobile {
+    width: 40%;
+  }
+
+  .desktop {
+    width: 60%;
+  }
+
+  .desktop .screenshot {
+    width: 95%;
+  }
+
+  .mobile .screenshot {
+    width: 40%;
+  }
+}
+
+.screenshot {
+  box-shadow: 0 0 1em 0.1em var(--shadow-color);
+}
+
+.desktop .badge {
+  height: 4em;
+  padding: 1em 0;
+}
+
+.mobile .badge {
+  height: 6em;
 }
