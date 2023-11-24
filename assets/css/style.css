@@ -50,10 +50,6 @@ h1 span {
   color: var(--on-surface-variant);
 }
 
-h1 img {
-  height: 32px;
-}
-
 header a {
   box-shadow: 0 4px 16px 0 var(--surface);
   background-color: var(--primary-container);
