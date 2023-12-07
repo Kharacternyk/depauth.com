@@ -16,7 +16,3 @@ main a {
 main small {
   white-space: nowrap;
 }
-
-.MathJax {
-  color: var(--primary);
-}
