@@ -1,0 +1,78 @@
+main {
+  display: flex;
+  flex: 1 0 auto;
+  text-align: center;
+  flex-direction: column;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
+  gap: 16px;
+}
+
+main p {
+  padding: 0 8px;
+  margin: 0;
+}
+
+main h2 {
+  margin: 0;
+}
+
+main a img {
+  vertical-align: middle;
+}
+
+.desktop {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  --shadow-color: var(--surface-variant);
+}
+
+.mobile {
+  flex-grow: 1;
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant);
+  --shadow-color: var(--surface);
+}
+
+.desktop .screenshot {
+  width: 78%;
+}
+
+.mobile .screenshot {
+  width: 22%;
+}
+
+.screenshot {
+  box-shadow: 0 0 16px 0 var(--shadow-color);
+}
+
+.mobile .badge {
+  margin: -16px 0;
+}
+
+@media (min-width: 750px) {
+  main {
+    flex-direction: row;
+  }
+
+  .mobile {
+    width: 40%;
+  }
+
+  .desktop {
+    width: 60%;
+  }
+
+  .desktop .screenshot {
+    width: 95%;
+  }
+
+  .mobile .screenshot {
+    width: 40%;
+  }
+}

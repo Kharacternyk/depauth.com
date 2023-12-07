@@ -1,0 +1,82 @@
+:root {
+  --primary-container: #004d64;
+  --on-primary-container: #bde9ff;
+  --surface: #191c1e;
+  --elevated-surface: #1e2a2f;
+  --on-surface: #e1e2e4;
+  --surface-variant: #40484c;
+  --on-surface-variant: #c0c8cd;
+  --primary: #65d3ff;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--on-surface);
+  background-color: var(--surface);
+  margin: 0;
+  line-height: 1.5;
+  -webkit-text-size-adjust: none;
+}
+
+header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  text-align: center;
+  background-color: var(--elevated-surface);
+}
+
+header p {
+  margin: 0;
+}
+
+header h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  background-color: var(--primary-container);
+}
+
+header h1 img {
+  margin: 8px;
+}
+
+header h1 span {
+  padding: 8px;
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant);
+}
+
+header h1 :nth-child(2n + 1) {
+  background-color: var(--primary-container);
+  color: var(--on-primary-container);
+}
+
+header a {
+  text-decoration: none;
+}
+
+header nav a {
+  box-shadow: 0 4px 8px 0 var(--surface);
+  background-color: var(--primary-container);
+  color: var(--on-primary-container);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+header nav {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 750px) {
+  header {
+    flex-direction: column;
+  }
+}

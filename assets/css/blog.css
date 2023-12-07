@@ -1,0 +1,22 @@
+main {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+main article {
+  max-width: 600px;
+}
+
+main a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+main small {
+  white-space: nowrap;
+}
+
+.MathJax {
+  color: var(--primary);
+}
