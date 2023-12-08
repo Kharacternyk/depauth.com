@@ -44,7 +44,12 @@
     <main>
       <article>
         <h1>The N×log(N) Limit of Multi-Factor Authentication.</h1>
-        <p><small>2023-12-08</small></p>
+        <p>
+          <small>
+            2023-12-08 | Nazar Vinnichuk
+            <a href="mailto:nazar@depauth.com">&lt;nazar@depauth.com&gt;</a>
+          </small>
+        </p>
         <p>
           <em>
             TL;DR: Given N authentication factors, the optimal number of
@@ -54,12 +59,11 @@
           </em>
         </p>
         <p>
-          Let us define a simple model of multi-factor authentication that is
-          convenient to analyze. We use locks to protect our homes from
-          intruders. It is common to have a few locks — the more locks, the
-          harder it is for unauthorized people to get inside. It is also common
-          to have a few identical keys for each lock — key loss happens too
-          often to rely on a single one.
+          Let us define a simple model of multi-factor authentication. We use
+          locks to protect our homes from intruders. It is common to have a few
+          locks to make it more difficult for strangers to get inside. It is
+          also common to have a few identical keys for each lock as a backup in
+          case some keys are lost.
         </p>
         <p>
           The locks correspond to authentication factors and the keys correspond
@@ -77,8 +81,8 @@
         </p>
         <p>
           Similarly, keys can be compromised by getting into wrong hands. If
-          someone gets hold of a key for each of the locks, they can get inside.
-          For simplicity, we assume that the probability of a key being
+          someone gets hold of a key for each one of the locks, they can get
+          inside. For simplicity, we assume that the probability of a key being
           compromised is equal to the probability of a key being lost, $p$.
         </p>
         <p>
