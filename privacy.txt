@@ -1,1 +1,3 @@
-DepAuth does not collect any data.
+The DepAuth application does not collect any data.
+
+The depauth.com website does not collect any personal data.
